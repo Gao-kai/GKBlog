@@ -103,6 +103,10 @@ const navToGithub = (url) => {
   .project-item {
     background-color: #32374b;
   }
+
+  .project-info--name {
+    color: #fff;
+  }
 }
 </style>
 
@@ -113,8 +117,10 @@ const navToGithub = (url) => {
 
 .project-item {
   display: flex;
-  background: #e7def2;
+  align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+  background: #e7def2;
   gap: 20px;
   margin-bottom: 20px;
   border-radius: 6px;
@@ -122,7 +128,6 @@ const navToGithub = (url) => {
   cursor: pointer;
   box-sizing: border-box;
   padding: 12px;
-  align-items: center;
 
   .project-image {
     width: 10rem;
@@ -135,7 +140,7 @@ const navToGithub = (url) => {
   }
 
   .project-info {
-    width: 0;
+    width: auto;
     flex: 1;
     .project-info--name {
       font-size: 1.5rem;
@@ -147,6 +152,7 @@ const navToGithub = (url) => {
       display: flex;
       flex-wrap: wrap;
       column-gap: 10px;
+      row-gap: 10px;
       margin-top: 12px;
       .tag {
         background: #e879f9;
@@ -162,9 +168,19 @@ const navToGithub = (url) => {
     }
   }
 }
+
+/* 这里命中的是页面屏幕最小宽度大于640px时候的布局 */
 @media (min-width: 640px) {
   .project-heading {
     padding-left: 1.5rem;
+  }
+
+  .project-item {
+    flex-direction: row;
+  }
+
+  .project-info {
+    width: 0;
   }
 }
 </style>
