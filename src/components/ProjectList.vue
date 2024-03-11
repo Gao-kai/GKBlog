@@ -71,30 +71,31 @@ const projectList = ref([
 const navToGithub = (url) => {
   window.open(url);
 };
-fetch("https://api.github.com/users/Gao-kai/repos?per_page=100", {
-  method: "GET",
-  headers: {
-    Accept: "application/vnd.github.v3+json",
-    Authorization: "token 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",
-  },
-})
-  .then((response) => response.json())
-  .then((data) => {
-    projectList.value = data
-      .filter((item) =>
-        ["GKBlog", "react-fullstack-lowcode", "2024-Algorithm"].includes(
-          item.name
-        )
-      )
-      .map((item) => {
-        return {
-          name: item.name,
-          id: item.id,
-          description: item.description,
-          html_url: item.html_url,
-        };
-      });
-  });
+// fetch("https://api.github.com/users/Gao-kai/repos?per_page=100", {
+//   method: "GET",
+//   headers: {
+//     Accept: "application/vnd.github.v3+json",
+//     Authorization: "token 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",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//     projectList.value = data
+//       .filter((item) =>
+//         ["GKBlog", "react-fullstack-lowcode", "2024-Algorithm"].includes(
+//           item.name
+//         )
+//       )
+//       .map((item) => {
+//         return {
+//           name: item.name,
+//           id: item.id,
+//           description: item.description,
+//           html_url: item.html_url,
+//         };
+//       });
+//   });
 </script>
 
 <style lang="scss">
