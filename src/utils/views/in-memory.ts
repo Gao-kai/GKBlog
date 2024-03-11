@@ -1,6 +1,6 @@
 const client = new Map<string, number>();
 
-export const getViewsBySlug = async (slug: string) => {
+export default const getViewsBySlug = async (slug: string) => {
 	if (slug) {
 		const prevValue = client.get(slug);
 		let newValue = 1;
