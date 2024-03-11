@@ -35,7 +35,7 @@ const projectList = ref([
     description: "Too Hard！",
     html_url: "https://github.com/Gao-kai/2024-Algorithm",
     tagList: ["数组", "队列/栈", "二分法", "链表", "二叉树", "贪心算法"],
-    img_url: "/public/assets/algo.png",
+    img_url: "/assets/algo.png",
   },
   {
     name: "GKBlog",
@@ -50,7 +50,7 @@ const projectList = ref([
       "Tailwind",
       "markdown",
     ],
-    img_url: "/public/assets/blog.png",
+    img_url: "/assets/blog.png",
   },
   {
     name: "react-fullstack-lowcode",
@@ -65,7 +65,7 @@ const projectList = ref([
       "Node.js",
       "pnpm+workspace",
     ],
-    img_url: "/public/assets/lowcode.png",
+    img_url: "/assets/lowcode.png",
   },
 ]);
 const navToGithub = (url) => {
