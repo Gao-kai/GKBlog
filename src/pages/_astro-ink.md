@@ -1,4 +1,8 @@
-**Astro-Ink** is a crisp, minimal, personal blog theme for Astro, that shows the capability of statically built sites - offering all the goodness and DX of the modern JS ecosystem without actually shipping any JS by default. And, above all...     
-### It's Open-Source!
-**Maintained By:** Aftab Alam // [@aftabbuddy](https://twitter.com/aftabbuddy)  // [one-aalam](https://github.com/one-aalam)
-                
+### 嘿，我是Kelinlawu
+
+一名前端开发工程师，这里主要记载一些知识和生活片段,这是我2024年要做的一些事情：
+
++ 前端框架Vue和React源码手写
++ 前端构建工具深入系列
++ 数据结构与算法
++ 全栈React+Nuxt+Next低代码个人项目

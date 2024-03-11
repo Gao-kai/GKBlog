@@ -16,29 +16,39 @@ description: Markdoc extends the markdown syntax you love to offer you authoring
 Tags are the heart of Markdoc system. You can use native Markdoc tags, like tables(example below), conditionals, and partials...
 
 ## Table in Markdoc
+
 {% table %}
+
 * Foo
 * Bar
 * Baz
+
 ---
+
 *
+
   ```
   puts "Some code here."
   ```
+
 *
   <!-- {% list type="checkmark" %}
   * Bulleted list in table
   * Second item in bulleted list
   {% /list %} -->
 * Text in a table
+
 ---
+
 *
   A "loose" list with
 
   multiple line items
 * Test 2
 * Test 3
+
 ---
+
 * Test 1
 * A cell that spans two columns {% colspan=2 %}
 {% /table %}
@@ -46,26 +56,31 @@ Tags are the heart of Markdoc system. You can use native Markdoc tags, like tabl
 or create custom components.
 
 ## Tags available out of Ink
+
 Astro Ink ships with the following tags with more coming soon...
 
 ### Callout
 
-#### Note 
+#### Note
+
 {% callout type="note" title="title goes here..." %}
     lorem ipsum doler sit amet lorem  
 {% /callout %}  
   
-#### Error 
+#### Error
+
 {% callout type="error" title="title goes here..." %}
     lorem ipsum doler sit amet
 {% /callout %}
 
-#### Warning 
+#### Warning
+
 {% callout type="warning" title="title goes here..." %}
     lorem ipsum doler sit amet
 {% /callout %}
 
-#### Check 
+#### Check
+
 {% callout type="check" title="title goes here..." %}
     lorem ipsum doler sit amet
 {% /callout %}
@@ -77,12 +92,11 @@ Astro Ink ships with the following tags with more coming soon...
 {% /link %}
 
 ### Tweet Embed
-{% tweet url="https://twitter.com/aftabbuddy/status/1630403326406959105" %}
+
+{% tweet url="<https://twitter.com/aftabbuddy/status/1630403326406959105>" %}
 {% /tweet %}
 
-
-
-{% yt url="https://www.youtube.com/embed/ADnaRwQZfqw" title="SvelteKit + GraphQL with Houdini | Intro, Setup and Project Overview" %}
+{% yt url="<https://www.youtube.com/embed/ADnaRwQZfqw>" title="SvelteKit + GraphQL with Houdini | Intro, Setup and Project Overview" %}
 {% /yt %}
 
 ### Tabs

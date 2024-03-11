@@ -3,6 +3,7 @@ export const prerender = true;
 
 import { getCollection, getEntryBySlug } from "astro:content";
 import DefaultPageLayout from "$/layouts/default.astro";
+import ProjectList from "$/components/ProjectList.vue";
 import PostPreviewList from "$/components/PostPreviewList.astro";
 import Prose from "$/components/Prose.astro";
 import { Content as AboutAstroInk } from "./_astro-ink.md";
@@ -11,16 +12,21 @@ const title = "Home";
 const description =
   "Astro-Ink is a crisp, minimal, personal blog theme for Astro";
 
+/**
+ * getCollection:获取src/content/blog目录下的所有条目
+ */
 const posts = await getCollection("blog");
 ---
 
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
   <div class="hero">
+    <!-- 头像 -->
     <div class="hero__face">
       <div class="author-card">
-        <img src="/public/assets/logo.jpg" title="Aalam" />
+        <img src="/assets/logo.jpg" title="Aalam" />
       </div>
     </div>
+    <!-- 简述 -->
     <div class="hero__says">
       <Prose>
         <AboutAstroInk />
@@ -28,6 +34,11 @@ const posts = await getCollection("blog");
     </div>
   </div>
   <hr />
+  <!-- 最近项目 -->
+  <ProjectList />
+  <hr />
+
+  <!-- 最近推送 -->
   <PostPreviewList posts={posts.slice(0, 3)} heading="recent posts" />
   <div class="page__actions">
     <a class="action__go-to-blog ink-h" href="/blog" title="All Posts"
